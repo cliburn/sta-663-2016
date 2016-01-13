@@ -73,7 +73,7 @@ Instructions for how to submit homework will be provided shortly.
 
 Resources
 ----
-All notebooks, data sets and homework assignment will be posted to the GitHub repository at https://github.com/cliburn/sta-663-2016/settings/collaboration
+All notebooks, data sets and homework assignment will be posted to the GitHub repository at https://github.com/cliburn/sta-663-2016
 
 Honor Code
 ----
