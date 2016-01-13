@@ -84,7 +84,7 @@ Lecture Sequence (subject to revision)
 ### Lecture 1: Programming in Python
 
 - Using Jupyter in Docker
-- Setting up Jupyter on AWS cloud computing platform
+- Setting up account on AWS (Amazon Web Services) cloud computing platform
 - Using `git`: Cloning, pulling, pushing
 - Jupyter: Literate and multi-language programming
 - Python: Data structures and control flow
