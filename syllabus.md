@@ -4,16 +4,27 @@ STA 663 Syllabus (Spring 2016)
 Learning Objectives
 ----
 - Practice writing code for analysis that is reproducible
+
 > Use of git, Jupyter, testing and role of automation
+
 - Achieve fluency in Python
+
 > Write idiomatic Python 3 code. There will be ample programming exercises for you to develop this skill.
+
 - Become familiar with the most useful Python packages for solving analysis problems
+
 > Such packages include numpy, scipy, matplotlib, pandas, scikit-learn, statsmodels, pymc3, pystan, pyspark and others
+
 - Develop intuition for concepts (e.g. geometry) underlying statistical algorithms
+
 > How do optimization routines, EM and MCMC actually do their magic?
+
 - Learn how to develop statistical algorithms in Python
+
 > Final class project requires you to develop, optimize, test and apply a statistical algorithm from the research literature
+
 - Profile and optimize code to make good use of available resources (e.g parallel environments)
+
 > From interpreted to compiled code (Pytho  to C), multi-core parallelism, GPU programming and distributed computing for big data
 
 Instructors
@@ -35,10 +46,15 @@ Please bring a laptop for each class as you will often be expected to type along
 Grading
 ----
 - Homework assignments 50%
+
 > There will be up to 10 homework assignments, each of equal weight. These will typically require significant programming effort.
+
 - Mid-term exams 25%
+
 > This will be an in-class series of programming challenges. If you have been working hard on homework assignments these challenges should be well within your ability.
+
 - Final project 25%
+
 > For the final project, you will implement, test, optimize and apply a statistical algorithm from a research paper. You will submit a Github repository containing all documentation and code created. There will also be a class presentation of the project.
 
 ### Final grade calculations
