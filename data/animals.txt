@@ -1,0 +1,8 @@
+name|species|age|weight
+arun|cat|5|7.3
+bob|bird|2|1.5
+coco|cat|2|5.5
+dumbo|elephant|23|454
+elmo|dog|5|11
+fido|dog|3|24.5
+gumba|bird|2|2.7
