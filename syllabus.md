@@ -75,6 +75,8 @@ Resources
 ----
 All notebooks, data sets and homework assignment will be posted to the GitHub repository at https://github.com/cliburn/sta-663-2016
 
+A searchable web-accessible version of the notebooks is at http://people.duke.edu/~ccc14/sta-663-2016/
+
 Honor Code
 ----
 Please follow the Duke honor code. All work submitted should be from your individual effort unless given explicit instructions otherwise.
