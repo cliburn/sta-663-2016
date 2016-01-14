@@ -1,18 +1,11 @@
 To build sphinx docs:
 ```
+pip install nbsphinx
 pip install cloud_sptheme
 cd lectures
-sphinx-build . _build
+make html
+make latexpdf
 ```
 
-Open _build/index.html in a browser.
-
-To  build PDF from LaTeX
-```
-sphinx-build . _build -b latex
-cd _build
-pdflatex ComputationalStatisticsinPython.tex
-cd ..
-```
-
-Open _build/ComputationalStatisticsinPython.pdf
+For HTML, open _build/html/index.html
+For PDF, open _build/latex/ComputationalStatisticsinPython.pdf
