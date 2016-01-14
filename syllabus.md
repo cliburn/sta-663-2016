@@ -25,7 +25,7 @@ Learning Objectives
 
 - Profile and optimize code to make good use of available resources (e.g parallel environments)
 
-> From interpreted to compiled code (Pytho  to C), multi-core parallelism, GPU programming and distributed computing for big data
+> From interpreted to compiled code (Python to C), multi-core parallelism, GPU programming and distributed computing for big data
 
 Instructors
 ----
@@ -37,7 +37,7 @@ Instructors
 Office Hours
 ----
 - Christine Chai (TA): Time and place
-- Yuhao Liang (TA): Time and place
+- Yuhao Liang (TA): Tuesday 7pm to 9pm Old Chem 211A
 
 Requirements for Class
 ----
