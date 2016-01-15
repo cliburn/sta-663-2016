@@ -17,6 +17,7 @@ Contents:
    02_Strings
    03_Graphics
    03_Numbers
+   04_Data
 
 
 Indices and tables
