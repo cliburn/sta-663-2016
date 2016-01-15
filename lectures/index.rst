@@ -10,7 +10,7 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   
+
    01_Introduction_To_Python
    02_Functions
    02_IO
@@ -18,6 +18,7 @@ Contents:
    03_Graphics
    03_Numbers
    04_Data
+   Local_Installation
 
 
 Indices and tables
