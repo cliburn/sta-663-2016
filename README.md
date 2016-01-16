@@ -1,4 +1,4 @@
-# sta-663-2016
+# sta663
 
 STA663 Statistical Computing and Computation, Spring 2016
 
