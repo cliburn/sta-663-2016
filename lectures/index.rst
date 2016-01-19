@@ -19,7 +19,7 @@ Contents:
    03_Numbers
    04_Data
    Local_Installation
-
+   Customizing_Jupyter
 
 Indices and tables
 ==================
