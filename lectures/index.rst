@@ -13,11 +13,13 @@ Contents:
 
    01_Introduction_To_Python
    02_Functions
+   02_Classes
    02_IO
    02_Strings
    03_Graphics
    03_Numbers
    04_Data
+   04_SQL
    Local_Installation
    Customizing_Jupyter
 
