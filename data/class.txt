@@ -1,0 +1,6 @@
+class_id,code,name,credits
+1,ANT01,Introduction to Hobbits,4
+2,MAT802,Abstrct Nonsense,8
+3,ENG234,Jabberwocky,2
+4,STA007,Statistics for Secret Agens,4
+5,PHY211,Physics of Star Wars,4
