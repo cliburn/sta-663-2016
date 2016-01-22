@@ -1,0 +1,8 @@
+
+student_id,first,last,email,major_id
+1,frodo,baggins,frodo.baggins@duke.edu,1
+2,bilbo,baggins,b_baggins@duke.edu,3
+3,golum,golum,golum.golum@duke.edu,2
+4,gandalf,white,g.white@duke.edu,5
+5,gandalf,grey,g.grey@duke.edu,6
+6,saruman,wise,s.wise@duke.edu,2

@@ -1,0 +1,6 @@
+major_id,name
+1,Computer Science
+2,Physics
+3,Statisitcs
+4,English
+5,History
