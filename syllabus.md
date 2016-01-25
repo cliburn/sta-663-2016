@@ -37,7 +37,7 @@ Instructors
 Office Hours
 ----
 
-- Cliburn Chan: Thursday 6pm yo 7pm Old Chem 116 
+- Cliburn Chan: Thursday 6pm to 7pm Old Chem 116 
 - Christine Chai (TA): Monday 1pm to 3 pm Old Chem 211A
 - Yuhao Liang (TA): Tuesday 7pm to 9pm Old Chem 211A
 
