@@ -37,7 +37,7 @@ Instructors
 Office Hours
 ----
 
-- Cliburn Chan: Thursday 6pm to 7pm Old Chem 116 
+- Cliburn Chan: Thursday 6pm to 7pm Old Chem 116
 - Christine Chai (TA): Monday 1pm to 3 pm Old Chem 211A
 - Yuhao Liang (TA): Tuesday 7pm to 9pm Old Chem 211A
 
@@ -85,7 +85,7 @@ Please follow the Duke honor code. All work submitted should be from your indivi
 
 Lecture Sequence (subject to revision)
 ----
-### Lecture 1: Programming in Python
+### Lecture 1: Introduction to Course
 
 - Using Jupyter in Docker
 - Setting up account on AWS (Amazon Web Services) cloud computing platform
@@ -102,7 +102,7 @@ Lecture Sequence (subject to revision)
 - Using `R` in Jupyter
 - Use Python as an interactive calculator
 
-### Lecture 2: Programming in Python
+### Lecture 2: Basics of Python
 
 - Python: Functions
 - Python: Text
@@ -115,27 +115,45 @@ Lecture Sequence (subject to revision)
 - Load and save data from files and URLs
 - Basic string data munging
 
-### Lecture 3: Programming in Python
+### Lecture 3: Working with numeric data in `numpy`
 
 - Python: Numbers
-- Python: Graphics
-- `numpy`, `scipy`, `matpltolib`, `seaborn`
+- `numpy`, `scipy`
 
 #### Objectives
-- Manipulate vectors and matrices in Python
-- Plot and customize statistical graphics
+- Create and manipulate vectors and matrices in Python
 
-### Lecture 4: Programming in Python
+### Lecture 4: Data analysis with `pandas`
 
 - Python: Data
-- `pandas`, `blaze`, `sqlite3`
+- Python: Databases
+- Python: Graphics
+- SQL, `sqlite3`, `matpltolib`, `seaborn`
 
 #### Objectives
-- Basic use of SQL to create and query relational databases
-- Manipulation of DataFrames
-- Conversion between storage backends with `odo` and `blaze`
+- Getting data into DataFrames
+- Selection of data in DataFrames
+- Data summaries and cleaning
+- Split-apply-combine
+- Basic use of SQL to query relational databases
+- Creating and customizing plots in Python
 
-### Lecture 5: Numerical methods
+### Lecture 5: Machine learning with `scikit-learn`
+
+- Preprocessing
+- Dimension reduction
+- Clustering
+- Supervised learning
+- Probabilistic (generative) methods
+- Analysis pipelines
+- Validation
+
+#### Objectives
+
+- Exposure to machine learning examples before we dive into the underlying algorithmic ideas
+- Ability to run standard analysis on small to moderate data sets
+
+### Lecture 6: Numerical methods
 
 - Computer arithmetic
 - Linear algebra 1
@@ -147,7 +165,7 @@ Lecture Sequence (subject to revision)
 - Understand basic concepts of linear algebra
 - Use `linalg` library to do do linear algebra routines
 
-### Lecture 6: Numerical methods
+### Lecture 7: Numerical methods
 
 - Linear algebra 2
 - `scipy.blas` and `scipy.lapack`
@@ -156,7 +174,7 @@ Lecture Sequence (subject to revision)
 - Understand matrix decomposition algorithms
 - Use `linalg` to solve linear algebra problems
 
-### Lecture 7: Numerical methods
+### Lecture 8: Numerical methods
 
 - Theory: PCA, SVD and LSA
 - `scikit-learn` and `gensim`
@@ -165,7 +183,7 @@ Lecture Sequence (subject to revision)
 - Understand PCA and related algorithms
 - Apply PCA for dimension reduction in topic modeling
 
-### Lecture 8: Numerical methods
+### Lecture 9: Numerical methods
 
 - Theory: Root finding and optimization
 - `numpy` and `scipy.optimize`
@@ -175,7 +193,7 @@ Lecture Sequence (subject to revision)
 - Understand Newton method in 1D
 - Understand relationship between root-finidng and optimization
 
-### Lecture 9: Numerical methods
+### Lecture 10: Numerical methods
 
 - Theory: Multivariate optimization 1
 - `scipy.optimize` and `scikit-learn`
@@ -185,7 +203,7 @@ Lecture Sequence (subject to revision)
 - Understand gradient descent and stochastic gradient descent
 - Apply gradient descent to solve a regression problem
 
-### Lecture 10: Numerical methods
+### Lecture 11: Numerical methods
 
 - Theory: Multivariate optimization 2
 - `statsmodels`
@@ -195,7 +213,7 @@ Lecture Sequence (subject to revision)
 - Understand Newton and conjugate gradient methods
 - Understand how Newton method is used in IRLS
 
-### Lecture 11: Numerical methods
+### Lecture 12: Numerical methods
 
 - Theory: Expectation-Maximization 1
 - `numpy`
@@ -204,7 +222,7 @@ Lecture Sequence (subject to revision)
 - Understand EM and data augmentations
 - Apply EM to simple Bernoulli/Binomal models
 
-### Lecture 12: Numerical methods
+### Lecture 13: Numerical methods
 
 - Theory: Expectation-Maximization 2
 - `pymix`
@@ -214,7 +232,7 @@ Lecture Sequence (subject to revision)
 - Applying to mixture of Gaussians
 - EM for the MAP
 
-### Lecture 13: Probabilistic methods
+### Lecture 14: Probabilistic methods
 
 - Probability and random number generation
 - `numpy.random` and `scipy.stats`
@@ -224,7 +242,7 @@ Lecture Sequence (subject to revision)
 - The CDF and inverse transform method for generating random numbers
 - Using discrete and continuous distributions
 
-### Lecture 14: Probabilistic methods
+### Lecture 15: Probabilistic methods
 
 - Simulation and resampling
 - Monte Carlo methods
@@ -235,7 +253,7 @@ Lecture Sequence (subject to revision)
 - Code simple machine learning and cross-validation example
 - Using Monte Carlo methods for estimating integrals
 
-### Lecture 15: Probabilistic methods
+### Lecture 16: Probabilistic methods
 
 - MCMC 1: Gibbs and Metropolis
 - `numpy.random` and `scipy.stats`
@@ -245,7 +263,7 @@ Lecture Sequence (subject to revision)
 - Hadn-coding of Gibbs sampler
 - Inference and posterior predictive checks
 
-### Lecture 16: Probabilistic methods
+### Lecture 17: Probabilistic methods
 
 - MCMC 2: Slice and HMC
 - `pymc3` and `pystan`
@@ -254,92 +272,86 @@ Lecture Sequence (subject to revision)
 - Intuition for slice and Hamiltonian samplers
 - Use of MCMC packages to fit hierarchical models
 
-### Lecture 17: Improving performance
+### Lecture 18: Improving performance
 
 - Algorithmic complexity
 - Benchmarking and profiling
 - Code optimization
-- `cython` and `numba`
+- Using appropriate data structures
+- Classic algorithmic approaches to speed up code
 
 #### Objectives
 - Intuition for performance of algorithms and data structures
 - Use of Big O notation
 - Benchmarking and profiling
-- How to go from interpreted to compiled code using `cython` and `numba.jit`
 
-### Lecture 18: Improving performance
+### Lecture 19: Improving performance
+
+- Working with `cython` and `numba`
+- How to go from interpreted to compiled code using `cython`
+- Using `numba` to compile code - `jit`, `njit`, `vectorize`
+- Using `numba` on the GPU
+
+#### Objectives
+- Get speed-ups with compiled code
+
+### Lecture 20: Improving performance
 
 - Introduction to parallel programming
 - Benefits of functional approach
 - Synchronous and asynchronous programs
 - Embarrassingly parallel programs
 - Master-worker paradigm
-- IPython.Parallel, `dask`, and `multiprocessing`
+- IPython. Parallel, `dask`, and `multiprocessing`
 
 #### Objectives
 - Understand common parallel idioms
 - Run embarrassingly parallel programs on multiple cores
 - Run shared memory programs on multiple cores
 
-### Lecture 19: Improving performance (GPU programming)
-
-- CUDA 1
-- `numba`
-
-#### Objectives
-- GPU hardware concepts
-- Understand memory hierarchy
-- Grids, blocks and threads
-- CUDA kernels
-- Using `numba` for easy CUDA
-- First CUDA program
-
-### Lecture 20: Improving performance (GPU programming)
-
-- CUDA 2
-- `numba`
-
-#### Objectives
-- Code matrix multiplication routines without shared memory
-- Code matrix multiplication routines with shared memory
-
-### Lecture 21: Improving performance (GPU programming)
-
-- CUDA 3
-- `numba`
-
-#### Objectives
-- Coding a Gaussian mixture model with CUDA kernels
-
-### Lecture 22: Improving performance (Distributed computing)
+### Lecture 21: Distributed computing
 
 - Working with massive data sets
-- Iterators and generators
+- Setting up Spark locally
+- Setting Spark up on a cluster
 - Introduction to Spark
-- `itertools`, `blaze` and `pyspark`
+- Working with RDDs (transforms and actions)
+- Using `pyspark`
 
 #### Objectives
 - Intuition for how distributed computing works
-- Working with massive data sets without running out of memory
 - Working with Spark Resilient Distributed Datasets (RDD)
+- Minimizing data shuffles: Accumulators, broadcast values and partitioning
 
-### Lecture 23: Improving performance (Distributed computing)
+### Lecture 22: Conserving RAM
 
-- Spark 2
-- `PySpark`
-
-#### Objectives
-- Spark programming concepts
-- Machine learning with `pyspark` and `MLLib`
-
-### Lecture 24: Improving performance (Distributed computing)
-
-- Spark 3
-- `PySpark`
+- Efficient storage for numeric data (dense and sparse arrays)
+- Efficient storage of stings (tries)
+- Distinct value sketches and probabilistic data structures
+- Yes/No oracle - the Bloom filter
 
 #### Objectives
-- More elaborate examples with `pyspark`
+- Understand hardware latencies and why modern CPUs are starved
+- Working with massive data sets without running out of memory
 
+### Lecture 23: Distributed Computing
+
+- Spark Streaming
+- Spark SQL, DataFrames and DataSets
+- NoSQL and big data formats and databases
+
+#### Objectives
+- Stateless and stateful processing of streaming data
+- Using Spark SQL and its efficient data structures
+
+### Lecture 24: Distributed Computing
+
+- Using Spark MLLib with examples
+- Using Spark GraphX with examples
+
+#### Objectives
+- Machine learning with `MLLib`
+- Graph algorithms with `GraphX`
 
 Laboratory Sequence (subejct to revision)
 ----
@@ -400,3 +412,36 @@ Laboratory Sequence (subejct to revision)
 - Computer vision with `cv2`
 - Machine learning with `scikit-learn`
 - Packaging and distributing Python applications
+
+Removed in revision
+-----
+
+### Lecture 19: Improving performance (GPU programming)
+
+- CUDA 2
+- `numba`
+
+#### Objectives
+- GPU hardware concepts
+- Understand memory hierarchy
+- Grids, blocks and threads
+- CUDA kernels
+- Using `numba` for easy CUDA
+- First CUDA program
+
+### Lecture 20: Improving performance (GPU programming)
+
+- CUDA 2
+- `numba`
+
+#### Objectives
+- Code matrix multiplication routines without shared memory
+- Code matrix multiplication routines with shared memory
+
+### Lecture 21: Improving performance (GPU programming)
+
+- CUDA 3
+- `numba`
+
+#### Objectives
+- Coding a Gaussian mixture model with CUDA kernels
