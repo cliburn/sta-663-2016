@@ -20,6 +20,7 @@ Contents:
    03_Numbers
    04_Data
    04_SQL
+   05_Machine_Leraning
    Local_Installation
    Customizing_Jupyter
 
