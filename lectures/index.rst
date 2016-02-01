@@ -21,6 +21,8 @@ Contents:
    04_Data
    04_SQL
    05_Machine_Leraning
+   07_LinearAlgebra1.ipynb
+   06_LinearAlgebraExamples.ipynb
    Local_Installation
    Customizing_Jupyter
 
