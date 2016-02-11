@@ -26,8 +26,10 @@ Contents:
    08_LinearAlgebra2
    06_LinearAlgebraExamples
    PCA
-   
    SymbolicAlgebra
+   10_Optimization
+   Vector_Calculus
+
    Local_Installation
    Customizing_Jupyter
 
