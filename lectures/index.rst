@@ -30,8 +30,9 @@ Contents:
    PCA
    SymbolicAlgebra
    11_OptimizationOneDimension.ipynb
-   10_Optimization
+   12_MultivariateOptimizationAlgortihms
    Vector_Calculus
+   10_Optimization
 
    Local_Installation
    Customizing_Jupyter
