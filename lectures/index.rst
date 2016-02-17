@@ -22,17 +22,17 @@ Contents:
    03_Numbers
    04_Data
    04_SQL
-   05_Machine_Leraning
-   LinearAlgebra.ipynb
+   05_Machine_Learning
+   06_LinearAlgebra
    07_LinearAlgebra1
    08_LinearAlgebra2
-   06_LinearAlgebraExamples
-   PCA
-   SymbolicAlgebra
+   09_LinearAlgebraExamples
+   09_PCA
+   10_SymbolicAlgebra
    11_OptimizationOneDimension.ipynb
-   12_MultivariateOptimizationAlgortihms
-   Vector_Calculus
-   10_Optimization
+   12_MultivariateOptimizationAlgorithms
+   12_Vector_Calculus
+   13_Optimization
 
    Local_Installation
    Customizing_Jupyter
