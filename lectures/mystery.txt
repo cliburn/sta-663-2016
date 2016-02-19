@@ -1,0 +1,49 @@
+﻿Intensive blood-glucose control with sulphonylureas or insulin compared with
+      conventional treatment and risk of complications in patients with type 2 diabetes
+BACKGROUND: Improved blood-glucose control decreases the progression of diabetic 
+      microvascular disease, but the effect on macrovascular complications is unknown. 
+      There is concern that sulphonylureas may increase cardiovascular mortality in
+      patients with type 2 diabetes and that high insulin concentrations may enhance
+      atheroma formation. We compared the effects of intensive blood-glucose control
+      with either sulphonylurea or insulin and conventional treatment on the risk of
+      microvascular and macrovascular complications in patients with type 2 diabetes in
+      a randomised controlled trial. METHODS: 3867 newly diagnosed patients with type 2
+      diabetes, median age 54 years (IQR 48-60 years), who after 3 months' diet
+      treatment had a mean of two fasting plasma glucose (FPG) concentrations of
+      6.1-15.0 mmol/L were randomly assigned intensive policy with a sulphonylurea
+      (chlorpropamide, glibenclamide, or glipizide) or with insulin, or conventional
+      policy with diet. The aim in the intensive group was FPG less than 6 mmol/L. In
+      the conventional group, the aim was the best achievable FPG with diet alone;
+      drugs were added only if there were hyperglycaemic symptoms or FPG greater than
+      15 mmol/L. Three aggregate endpoints were used to assess differences between
+      conventional and intensive treatment: any diabetes-related endpoint (sudden
+      death, death from hyperglycaemia or hypoglycaemia, fatal or non-fatal myocardial 
+      infarction, angina, heart failure, stroke, renal failure, amputation [of at least
+      one digit], vitreous haemorrhage, retinopathy requiring photocoagulation,
+      blindness in one eye, or cataract extraction); diabetes-related death (death from
+      myocardial infarction, stroke, peripheral vascular disease, renal disease,
+      hyperglycaemia or hypoglycaemia, and sudden death); all-cause mortality. Single
+      clinical endpoints and surrogate subclinical endpoints were also assessed. All
+      analyses were by intention to treat and frequency of hypoglycaemia was also
+      analysed by actual therapy. FINDINGS: Over 10 years, haemoglobin A1c (HbA1c) was 
+      7.0% (6.2-8.2) in the intensive group compared with 7.9% (6.9-8.8) in the
+      conventional group--an 11% reduction. There was no difference in HbA1c among
+      agents in the intensive group. Compared with the conventional group, the risk in 
+      the intensive group was 12% lower (95% CI 1-21, p=0.029) for any diabetes-related
+      endpoint; 10% lower (-11 to 27, p=0.34) for any diabetes-related death; and 6%
+      lower (-10 to 20, p=0.44) for all-cause mortality. Most of the risk reduction in 
+      the any diabetes-related aggregate endpoint was due to a 25% risk reduction
+      (7-40, p=0.0099) in microvascular endpoints, including the need for retinal
+      photocoagulation. There was no difference for any of the three aggregate
+      endpoints between the three intensive agents (chlorpropamide, glibenclamide, or
+      insulin). Patients in the intensive group had more hypoglycaemic episodes than
+      those in the conventional group on both types of analysis (both p<0.0001). The
+      rates of major hypoglycaemic episodes per year were 0.7% with conventional
+      treatment, 1.0% with chlorpropamide, 1.4% with glibenclamide, and 1.8% with
+      insulin. Weight gain was significantly higher in the intensive group (mean 2.9
+      kg) than in the conventional group (p<0.001), and patients assigned insulin had a
+      greater gain in weight (4.0 kg) than those assigned chlorpropamide (2.6 kg) or
+      glibenclamide (1.7 kg). INTERPRETATION: Intensive blood-glucose control by either
+      sulphonylureas or insulin substantially decreases the risk of microvascular
+      complications, but not macrovascular disease, in patients with type 2
+      diabetes.(ABSTRACT TRUNCATED)
