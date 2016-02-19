@@ -33,6 +33,7 @@ Contents:
    12_MultivariateOptimizationAlgorithms
    12_Vector_Calculus
    13_Optimization
+   14_ExpectationMaximization
 
    Local_Installation
    Customizing_Jupyter
