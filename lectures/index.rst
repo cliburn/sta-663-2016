@@ -34,6 +34,7 @@ Contents:
    12_Vector_Calculus
    13_Optimization
    14_ExpectationMaximization
+   15A_RandomNumbers
 
    Local_Installation
    Customizing_Jupyter
