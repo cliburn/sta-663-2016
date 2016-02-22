@@ -35,6 +35,8 @@ Contents:
    13_Optimization
    14_ExpectationMaximization
    15A_RandomNumbers
+   15B_MonteCarloIntegration
+   15C_ResamplingAndSimulation
 
    Local_Installation
    Customizing_Jupyter
