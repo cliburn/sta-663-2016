@@ -37,6 +37,7 @@ Contents:
    15A_RandomNumbers
    15B_MonteCarloIntegration
    15C_ResamplingAndSimulation
+   16A_MCMC
 
    Local_Installation
    Customizing_Jupyter
