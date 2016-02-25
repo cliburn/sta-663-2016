@@ -35,8 +35,8 @@ Contents:
    13_Optimization
    14_ExpectationMaximization
    15A_RandomNumbers
-   15B_MonteCarloIntegration
-   15C_ResamplingAndSimulation
+   15B_ResamplingAndSimulation
+   15C_MonteCarloIntegration
    16A_MCMC
 
    Local_Installation
