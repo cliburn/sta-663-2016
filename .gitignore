@@ -1,3 +1,5 @@
+*.pic
+trace*
 .DS_Store
 RISE/
 *ipynb_checkpoints*
