@@ -38,6 +38,9 @@ Contents:
    15B_ResamplingAndSimulation
    15C_MonteCarloIntegration
    16A_MCMC
+   16B_VisualizingMCMC
+   16C_PyMC3
+   PyStan
 
    Local_Installation
    Customizing_Jupyter
