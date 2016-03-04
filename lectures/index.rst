@@ -38,8 +38,7 @@ Contents:
    15B_ResamplingAndSimulation
    15C_MonteCarloIntegration
    16A_MCMC
-   AuxiliaryVariableMCMC
-   16B_VisualizingMCMC
+   16B_AuxiliaryVariableMCMC
    16C_PyMC3
    PyStan
 
