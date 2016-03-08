@@ -1,3 +1,11 @@
+Untitled*
+*.o
+*.c
+*.cpp
+*.h
+*.hpp
+*.pyx
+*pxd
 *.pic
 trace*
 .DS_Store
