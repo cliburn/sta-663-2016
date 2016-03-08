@@ -41,6 +41,12 @@ Contents:
    16B_AuxiliaryVariableMCMC
    16C_PyMC3
    PyStan
+   A01_CodeOptimization
+   A02_Big_Data_Structures
+   A03_C_Crash_Course
+   A04_Foreign_Function_Interface
+   A05_Compiling_To_Native_Code
+   A06_Cython
 
    Local_Installation
    Customizing_Jupyter
