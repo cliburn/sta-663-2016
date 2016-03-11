@@ -47,6 +47,7 @@ Contents:
    A04_Foreign_Function_Interface
    A05_Compiling_To_Native_Code
    A06_Cython
+   A07_Parallel_Programming
 
    Local_Installation
    Customizing_Jupyter
