@@ -1,3 +1,10 @@
+*main*
+*.so
+*.dylib
+*.json
+*.txt
+ex[0-9]*
+*.csv
 Untitled*
 *.o
 *.c
