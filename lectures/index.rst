@@ -40,9 +40,10 @@ Contents:
    16A_MCMC
    16B_AuxiliaryVariableMCMC
    16C_PyMC3
-   PyStan
+   16D_PyStan
+   17_C_InOneLecture
    A01_C_Crash_Course
-   A02_C++_Primer
+   A02_C++_Primer_Solutions
    A03_CodeOptimization
    A04_Big_Data_Structures
    A05_Foreign_Function_Interface
