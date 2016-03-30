@@ -44,13 +44,14 @@ Contents:
    17_C_InOneLecture
    A01_C_Crash_Course
    A02_C++_Primer_Solutions
+   B01_Review_C_C++
    A03_CodeOptimization
-   A04_Big_Data_Structures
    A05_Foreign_Function_Interface
    A06_Compiling_To_Native_Code
    A07_Cython
    A08_Parallel_Programming
    A09_Intermediate_Sized_Data
+   A04_Big_Data_Structures
 
    Local_Installation
    Customizing_Jupyter
