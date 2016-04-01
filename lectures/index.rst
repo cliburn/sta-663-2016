@@ -46,7 +46,7 @@ Contents:
    A02_C++_Primer_Solutions
    B01_Review_C_C++
    A03_CodeOptimization
-   A05_Foreign_Function_Interface
+   B02_Foreing_Language_Interface
    A06_Compiling_To_Native_Code
    A07_Cython
    A08_Parallel_Programming
