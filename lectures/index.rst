@@ -49,6 +49,7 @@ Contents:
    B02_Foreing_Language_Interface
    A06_Compiling_To_Native_Code
    A07_Cython
+   B03_Benchmarks
    B03_Optimization_Bakeoff
    A08_Parallel_Programming
    A09_Intermediate_Sized_Data
