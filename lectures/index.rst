@@ -47,7 +47,7 @@ Contents:
    B01_Review_C_C++
    A03_CodeOptimization
    B02_Foreing_Language_Interface
-   A06_Compiling_To_Native_Code
+   A06_Numba
    A07_Cython
    B03_Benchmarks
    B03_Optimization_Bakeoff
