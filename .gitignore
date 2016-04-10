@@ -21,6 +21,7 @@ RISE/
 *mplstyle*
 lectures/_build/
 data/
+web/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -8,30 +8,29 @@ Computational Statistics in Python
 
 `Notebooks and problem sets from GitHub repository <https://github.com/cliburn/sta-663-2016.git>`_
 
-Contents:
+Topics:
+--------
 
 .. toctree::
    :maxdepth: 2
 
    01_Introduction_To_Python
-   02_Functions
-   02_Classes
-   02_IO
-   02_Strings
-   03_Graphics
-   03_Numbers
-   04_Data
-   04_SQL
+   02A_Functions
+   02B_Strings
+   02C_IO
+   02D_Classes
+   03A_Numbers
+   03B_Graphics
+   04A_Data
+   04B_SQL
    05_Machine_Learning
-   06_LinearAlgebra
-   07_LinearAlgebra1
-   08_LinearAlgebra2
-   09_LinearAlgebraExamples
+   06_LinearAlgebra1
+   07_LinearAlgebra2
+   08_LinearAlgebraExamples
    09_PCA
    10_SymbolicAlgebra
-   11_OptimizationOneDimension.ipynb
+   11_OptimizationOneDimension
    12_MultivariateOptimizationAlgorithms
-   12_Vector_Calculus
    13_Optimization
    14_ExpectationMaximization
    15A_RandomNumbers
@@ -41,22 +40,48 @@ Contents:
    16B_AuxiliaryVariableMCMC
    16C_PyMC3
    16D_PyStan
-   17_C_InOneLecture
-   A01_C_Crash_Course
-   A02_C++_Primer_Solutions
-   B01_Review_C_C++
-   A03_CodeOptimization
-   B02_Foreing_Language_Interface
-   A06_Numba
-   A07_Cython
-   B03_Benchmarks
-   B03_Optimization_Bakeoff
-   A08_Parallel_Programming
-   A09_Intermediate_Sized_Data
-   A04_Big_Data_Structures
+   17A_C_Crash_Course
+   17B_C_InOneLecture
+   17C_C++_Primer_Solutions
+   17D_Review_C_C++
+   18A_CodeOptimization
+   18B_Foreing_Language_Interface
+   18C_Numba
+   18D_Cython
+   18E_Benchmarks
+   18F_Optimization_Bakeoff
+   19A_Parallel_Programming
+   19B_Threads_Processses_Concurrency
+   19C_IPyParallel
+   20A_Intermediate_Sized_Data
+   20B_Big_Data_Structures
 
-   Local_Installation
-   Customizing_Jupyter
+Setup
+-----------
+
+- :doc:`Local_Installation`
+- :doc:`Customizing_Jupyter`
+
+Homework
+----------
+
+- :doc:`homework/Homework01`
+- :doc:`homework/Homework01_Solutions`
+- :doc:`homework/Homework02`
+- :doc:`homework/Homework02_Solutions`
+- :doc:`homework/Homework03`
+- :doc:`homework/Homework03_Solutions`
+- :doc:`homework/Homework04`
+- :doc:`homework/Homework04_Solutions`
+- :doc:`homework/Homework05`
+- :doc:`homework/Homework05_Solutions`
+- :doc:`homework/Homework06`
+- :doc:`homework/Homework06_Solutions`
+- :doc:`homework/Homework07`
+- :doc:`homework/Homework07_Solutions`
+- :doc:`homework/Homework08`
+- :doc:`homework/Homework08_Solutions`
+
 
 Indices and tables
 ==================
