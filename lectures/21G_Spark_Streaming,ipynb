@@ -1,0 +1,470 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Spark Streaming\n",
+    "====\n",
+    "\n",
+    "The Spark Streaming library takes a stream of data and breaks it up into micro-batches that are then processed, giving the illusion of a continually updated stream of results."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Resources\n",
+    "----\n",
+    "\n",
+    "[Spark Streaming Programming Guide](http://spark.apache.org/docs/latest/streaming-programming-guide.html)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Streaming using sockets\n",
+    "----\n",
+    "\n",
+    "We will first illustrate the idea of streaming data over TCP/IP with the Python standard library `socket` module. The consumer and producer should be run in separate terminals\n",
+    "\n",
+    "Terminal 1\n",
+    "```bash\n",
+    "python consumer.py localhost 10000\n",
+    "```\n",
+    "\n",
+    "Terminal 2\n",
+    "```bash\n",
+    "python producer.py localhost 10000\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Consumer keeps a running word count"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting consumer.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file consumer.py\n",
+    "import sys\n",
+    "import socket\n",
+    "from collections import Counter\n",
+    "\n",
+    "HOST = sys.argv[1]\n",
+    "PORT = int(sys.argv[2])\n",
+    "\n",
+    "s = socket.socket()\n",
+    "s.bind((HOST, PORT))\n",
+    "s.listen(4)\n",
+    "connection, address = s.accept()\n",
+    "\n",
+    "c = Counter()\n",
+    "\n",
+    "while True:\n",
+    "    line = connection.recv(64)\n",
+    "    words = line.split()\n",
+    "    if words:\n",
+    "        c.update(words)\n",
+    "        print(c.most_common(5))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Producer sends data to server for processing"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting client.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file client.py\n",
+    "import socket\n",
+    "import time\n",
+    "import sys\n",
+    "\n",
+    "HOST = sys.argv[1]\n",
+    "PORT = int(sys.argv[2])\n",
+    "s = socket.socket()\n",
+    "s.connect((HOST, PORT))\n",
+    "while True:\n",
+    "    for line in open('data/Ulysses.txt'):\n",
+    "        s.sendall(str.encode(line))\n",
+    "        time.sleep(1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using Spark Streaming\n",
+    "----\n",
+    "\n",
+    "Now we'll replace the consumer with a Spark application. This will work with micro-batches lasting 2 seconds."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "from pyspark import SparkContext\n",
+    "\n",
+    "sc = SparkContext('local[*]')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('the', 13600), ('of', 8127), ('and', 6542), ('a', 5842), ('to', 4787)]"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lines = sc.textFile('data/Ulysses.txt')\n",
+    "\n",
+    "counts = (lines.flatMap(lambda line: line.split())\n",
+    "          .map(lambda word: (word, 1))\n",
+    "          .reduceByKey(lambda x,y: x+ y))\n",
+    "\n",
+    "counts.takeOrdered(5, key=lambda x: -x[1])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Monitor a directory for new or renamed files"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Writing file_consumer.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file file_consumer.py\n",
+    "\n",
+    "import sys\n",
+    "from pyspark import SparkContext\n",
+    "from pyspark.streaming import StreamingContext\n",
+    "\n",
+    "sc = SparkContext('local[*]')\n",
+    "sc.setLogLevel(\"WARN\")\n",
+    "\n",
+    "ssc = StreamingContext(sc, 2)\n",
+    "lines = ssc.textFileStream(sys.argv[1])\n",
+    "\n",
+    "counts = (lines.flatMap(lambda line: line.split())\n",
+    "          .map(lambda word: (word, 1))\n",
+    "          .reduceByKey(lambda x,y: x+ y))\n",
+    "\n",
+    "counts.pprint()\n",
+    "\n",
+    "ssc.start()\n",
+    "ssc.awaitTermination()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Usage\n",
+    "\n",
+    "Run in terminal\n",
+    "```bash\n",
+    "~/anaconda3/share/spark-1.6.0/bin/spark-submit file_consumer.py <folder>\n",
+    "```\n",
+    "\n",
+    "When you copy, move or save a file to `<folder>`, the word counts for that file will be updated .. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Monitor a TCP/IP socket"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting socket_consumer.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file socket_consumer.py\n",
+    "\n",
+    "import sys\n",
+    "from pyspark import SparkContext\n",
+    "from pyspark.streaming import StreamingContext\n",
+    "\n",
+    "sc = SparkContext('local[*]')\n",
+    "sc.setLogLevel(\"WARN\")\n",
+    "\n",
+    "ssc = StreamingContext(sc, 2)\n",
+    "lines = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))\n",
+    "\n",
+    "counts = (lines.flatMap(lambda line: line.split())\n",
+    "          .map(lambda word: (word, 1))\n",
+    "          .reduceByKey(lambda x,y: x+ y))\n",
+    "\n",
+    "counts.pprint()\n",
+    "\n",
+    "ssc.start()\n",
+    "ssc.awaitTermination()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Usage\n",
+    "\n",
+    "Run in terminal\n",
+    "```bash\n",
+    "~/anaconda3/share/spark-1.6.0/bin/spark-submit socket_consumer.py localhost 10000\n",
+    "```\n",
+    "\n",
+    "In a different terminal\n",
+    "```\n",
+    "nc -lk 10000\n",
+    "```\n",
+    "\n",
+    "Any text pasted in the `nc` terminal will have its words counted."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "### Keeping state"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Overwriting stateful_socket_consumer.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%file stateful_socket_consumer.py\n",
+    "\n",
+    "import sys\n",
+    "from pyspark import SparkContext\n",
+    "from pyspark.streaming import StreamingContext\n",
+    "\n",
+    "def updateFunc(new, last):\n",
+    "    if last is None:\n",
+    "        last = 0\n",
+    "    return sum(new) + last\n",
+    "\n",
+    "sc = SparkContext('local[*]')\n",
+    "sc.setLogLevel(\"WARN\")\n",
+    "\n",
+    "ssc = StreamingContext(sc, 2)\n",
+    "ssc.checkpoint(\"checkpoint\")\n",
+    "\n",
+    "lines = ssc.socketTextStream(sys.argv[1], int(sys.argv[2]))\n",
+    "\n",
+    "counts = (lines.flatMap(lambda line: line.split())\n",
+    "          .map(lambda word: (word, 1))\n",
+    "          .updateStateByKey(updateFunc)\n",
+    "          .transform(lambda x: x.sortByKey()))\n",
+    "\n",
+    "counts.pprint()\n",
+    "\n",
+    "ssc.start()\n",
+    "ssc.awaitTermination()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "collapsed": true
+   },
+   "source": [
+    "### Usage\n",
+    "\n",
+    "Same as above, but the Spark program will now maintain an updated running count."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 0
+}
