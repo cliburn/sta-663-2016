@@ -55,6 +55,10 @@ Topics:
    19C_IPyParallel
    20A_Intermediate_Sized_Data
    20B_Big_Data_Structures
+   21A_Introduction_To_Spark
+   21B_Efficiency_In_Spark
+   21C_Spark_SQL
+   21D_Spark_MLib
 
 Setup
 -----------
