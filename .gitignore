@@ -1,3 +1,5 @@
+*.npy
+*.npyz
 *main*
 *.so
 *.dylib
